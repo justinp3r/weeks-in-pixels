@@ -1,5 +1,5 @@
 import SendIcon from "@mui/icons-material/Send";
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
+import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { SetStateAction, useState } from "react";
 
@@ -8,12 +8,14 @@ interface AddNotesBoxProps {
   onAddNote: (note: string) => void;
 }
 
-export default function AddNotesBox({ onClose, onAddNote }:AddNotesBoxProps) {
+export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
   const today = new Date();
   const [text, setText] = useState("");
 
-  const handleTextChange = (event: { target: { value: SetStateAction<string>; }; }) => {
-    setText(event.target.value); 
+  const handleTextChange = (event: {
+    target: { value: SetStateAction<string> };
+  }) => {
+    setText(event.target.value);
   };
 
   const handleAddClick = () => {
@@ -33,10 +35,10 @@ export default function AddNotesBox({ onClose, onAddNote }:AddNotesBoxProps) {
         margin: "auto",
         borderRadius: 4,
         border: "2px solid",
-        borderColor: '#dbdde9',
+        borderColor: "#dbdde9",
       }}
     >
-      <Typography component={"span"} >
+      <Typography component={"span"}>
         <h3>
           Rückblick vom{" "}
           {today.getDate() +
@@ -56,24 +58,24 @@ export default function AddNotesBox({ onClose, onAddNote }:AddNotesBoxProps) {
         onChange={handleTextChange}
       />
       <Typography component={"span"}>
-      <Stack spacing={2} direction={{ xs: "column", sm: "row" }}> 
-        <Button
-          variant="text"
-          startIcon={<SendIcon />}
-          style={{ borderRadius: 13 }}
-          onClick={handleAddClick}
-        >
-          Hinzufügen
-        </Button>
-        <Button
-          variant="text"
-          startIcon={<CancelPresentationIcon />}
-          style={{ borderRadius: 13 }}
-          onClick={onClose}
-        >
-          Schließen
-        </Button>
-      </Stack>
+        <Stack spacing={2} direction={{ xs: "column", sm: "row" }}>
+          <Button
+            variant="text"
+            startIcon={<SendIcon />}
+            style={{ borderRadius: 13 }}
+            onClick={handleAddClick}
+          >
+            Hinzufügen
+          </Button>
+          <Button
+            variant="text"
+            startIcon={<CancelPresentationIcon />}
+            style={{ borderRadius: 13 }}
+            onClick={onClose}
+          >
+            Schließen
+          </Button>
+        </Stack>
       </Typography>
     </Box>
   );

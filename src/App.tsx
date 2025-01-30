@@ -76,7 +76,7 @@ function App() {
             <OneYearCheckboxes argumentYear={"2025"}></OneYearCheckboxes>
           </Card>
         </Grid>
-        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={2}>
+        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={2} paddingBottom={8}>
           <Card
             elevation={3}
             sx={{
