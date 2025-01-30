@@ -7,7 +7,7 @@ import NotesBox from "./NotesBox";
 import React from "react";
 import axios from "axios";
 
-const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts";
+const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts"; // URL to mock API
 
 export default function ForumContainer() {
   interface Post {
