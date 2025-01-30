@@ -13,7 +13,7 @@ interface HeaderBarProps {
 export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps) {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="primary.light" elevation={0}>
+      <AppBar position="static" color="secondary" elevation={0}>
         <Toolbar>
           {/* <IconButton
             size="large"

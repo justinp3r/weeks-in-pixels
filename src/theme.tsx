@@ -10,8 +10,8 @@ export const themeJustin = createTheme({
 
     },
     secondary: {
-      light: '#fffff',
-      main: '#e8e9ff',
+      light: '#ffffff',
+      main: '#ffffff',
       dark: '#ba000d',
       contrastText: '#000',
     },
