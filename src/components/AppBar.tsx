@@ -2,7 +2,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import HomeButton from "./HomeButton";
 import { FormControlLabel, FormGroup, Icon, IconButton, Typography } from "@mui/material";
 import { MaterialUISwitch } from "./DarkModeToggle";
 
@@ -36,7 +35,7 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
             </Icon>
           </IconButton>
           <Typography component={"span"} sx={{ flexGrow: 1 }}>
-            WhateverWeb
+            WEEKS IN PIXELS
           </Typography>
           <FormGroup>
             <FormControlLabel
