@@ -33,7 +33,7 @@ function App() {
             display="flex"
             justifyContent={"space-between"}
           >
-            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
+            <Grid size={{ xs: 5.8, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
                 elevation={3}
                 sx={{
@@ -48,7 +48,7 @@ function App() {
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
+            <Grid size={{ xs: 5.8, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
                 elevation={3}
                 sx={{
@@ -76,7 +76,7 @@ function App() {
             <OneYearCheckboxes argumentYear={"2025"}></OneYearCheckboxes>
           </Card>
         </Grid>
-        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={2}>
+        <Grid size={{ xs: 8, md: 5 }} border={borderLine + " solid green"} >
           <Card
             elevation={3}
             sx={{
