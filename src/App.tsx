@@ -13,7 +13,7 @@ import Calendar from "./components/Calendar";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const borderLine = "0px"; // Only for developement Mode
+  const borderLine = "1px"; // Only for developement Mode
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : themeJustin}>
@@ -26,7 +26,7 @@ function App() {
         spacing={2}
         border={borderLine + " solid grey"}
       >
-        <Grid size={{ xs: 8, md: 5 }} border={borderLine + " solid red"}>
+        <Grid size={{ xs: 5, md: 5 }} border={borderLine + " solid red"}>
           <Grid
             border={borderLine + " solid orange"}
             paddingBottom={8}
@@ -76,7 +76,7 @@ function App() {
             <OneYearCheckboxes argumentYear={"2025"}></OneYearCheckboxes>
           </Card>
         </Grid>
-        <Grid size={{ xs: 8, md: 5 }} border={borderLine + " solid green"}>
+        <Grid size={{ xs: 5, md: 5 }} border={borderLine + " solid green"}>
           <Card
             elevation={3}
             sx={{
