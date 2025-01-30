@@ -1,5 +1,6 @@
 {
   "name": "saturn-frontend",
+  "homepage" : "https://justinp3r.github.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
