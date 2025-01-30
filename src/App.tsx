@@ -13,7 +13,7 @@ import Calendar from "./components/Calendar";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const borderLine = "1px"; // Only for developement Mode
+  const borderLine = "0px"; // Only for developement Mode
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : themeJustin}>
@@ -33,7 +33,7 @@ function App() {
             display="flex"
             justifyContent={"space-between"}
           >
-            <Grid size={{ xs: 5, md: 5.5 }} border={borderLine + " solid red"}>
+            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
                 elevation={3}
                 sx={{
@@ -48,7 +48,7 @@ function App() {
               </Card>
             </Grid>
 
-            <Grid size={{ xs: 5, md: 5.5 }} border={borderLine + " solid red"}>
+            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
                 elevation={3}
                 sx={{
