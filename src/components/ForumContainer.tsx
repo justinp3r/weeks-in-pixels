@@ -91,7 +91,7 @@ export default function ForumContainer() {
       </Typography>
 
       <Typography component={"span"}>
-        <Stack spacing={2} direction="row">
+        <Stack spacing={4} direction="row">
           <Button
             variant="text"
             startIcon={<AddCircleOutlineIcon />}

@@ -49,8 +49,7 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
               label=""
             />
           </FormGroup>
-          <Button color="inherit">Kontakt</Button>
-          <Button color="inherit">Über</Button>
+          <Button color="inherit">About</Button>
         </Toolbar>
       </AppBar>
     </Box>
