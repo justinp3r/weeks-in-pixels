@@ -1,0 +1,33 @@
+
+services:
+  frontend:
+    container_name: saturn-frontend-container
+    image: saturn-frontend
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+    ports:
+      - 3001:5173  # Mappt den Container-Port 5173 auf den Host-Port 3001
+    volumes:     # Wichtig wenn das Projekt gemount werden soll
+      - type: bind
+        source: C:\Users\justi\Dev\weeks-in-pixels-main
+        target: /app
+      - /app/node_modules  # Verhindert, dass das node_modules-Verzeichnis vom Host gemountet wird
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    network_mode: bridge
+    develop:
+      watch:
+        - path: ../package.json
+          action: rebuild
+        - path: ../next.config.js
+          action: rebuild
+        - path: ../package-lock.json
+          action: rebuild
+        - path: .
+          target: /app
+          action: sync
