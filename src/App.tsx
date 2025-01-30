@@ -26,7 +26,7 @@ function App() {
         spacing={2}
         border={borderLine + " solid grey"}
       >
-        <Grid size={{ xs: 8, md: 5 }} border={borderLine + " solid red"}>
+        <Grid size={{ xs: 5, md: 5 }} border={borderLine + " solid red"}>
           <Grid
             border={borderLine + " solid orange"}
             paddingBottom={8}
