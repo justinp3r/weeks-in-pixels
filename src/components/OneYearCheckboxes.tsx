@@ -2,11 +2,11 @@ import { Box, Checkbox, Tooltip, Typography } from "@mui/material";
 import { useState } from "react";
 import Grid from "@mui/material/Grid2";
 
-function getWeekNumber(d) {
+function getWeekNumber(d: Date) {
   d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
   d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  const weekNo = Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+  const weekNo = Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7);
   return weekNo;
 }
 
@@ -27,7 +27,7 @@ export default function OneYearCheckboxes({ argumentYear }: argumentYearIF) {
     a1 // 52 Wochen = 52 Checkboxen
   );
 
-  const handleCheckboxChange = (index) => {
+  const handleCheckboxChange = (index: number) => {
     const updatedState = [...checkedState];
     updatedState[index] = !updatedState[index];
     setCheckedState(updatedState);

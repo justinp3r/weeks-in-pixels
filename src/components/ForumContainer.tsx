@@ -11,7 +11,13 @@ import axios from "axios";
 const baseURL = "http://localhost:3000/posts";
 
 export default function ForumContainer() {
-  const [posts, setPost] = React.useState([]);
+  interface Post {
+    id: number;
+    date: string;
+    post: string;
+  }
+  
+  const [posts, setPost] = React.useState<Post[]>([]);
   const [showAddNotes, setShowAddNotes] = useState(false);
 
   const handleReloadNotes = async () => {

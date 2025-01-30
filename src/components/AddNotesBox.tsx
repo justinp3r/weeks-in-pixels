@@ -3,7 +3,12 @@ import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { SetStateAction, useState } from "react";
 
-export default function AddNotesBox({ onClose, onAddNote }) {
+interface AddNotesBoxProps {
+  onClose: () => void;
+  onAddNote: (note: string) => void;
+}
+
+export default function AddNotesBox({ onClose, onAddNote }:AddNotesBoxProps) {
   const today = new Date();
   const [text, setText] = useState("");
 
