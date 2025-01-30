@@ -59,7 +59,6 @@ export default function OneYearCheckboxes({ argumentYear }: argumentYearIF) {
                 onChange={() => handleCheckboxChange(index)}
                 id={`${argumentYear}-week-checkbox-${index + 1}`}
                 color="primary"
-                disabled
               />
             </Tooltip>
           </Grid>

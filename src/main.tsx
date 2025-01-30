@@ -9,7 +9,7 @@ const root = document.getElementById("root");
 
 createRoot(root!).render(
   <StrictMode>
-    <HashRouter> {/* Hashrouter */}
+    <HashRouter> 
     <Routes>
         {/* App als übergeordnete Route */}
         <Route path="/" element={<App />}>
