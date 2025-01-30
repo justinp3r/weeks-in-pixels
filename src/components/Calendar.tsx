@@ -17,7 +17,7 @@ export default function Calendar() {
           {new Date().toLocaleDateString("de-DE", {
             day: "2-digit",
             month: "2-digit",
-            year: "numeric",
+            year: "2-digit",
           })}
         </h3>
       </Typography>

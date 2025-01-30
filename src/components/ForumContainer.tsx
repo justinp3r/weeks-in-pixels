@@ -1,7 +1,6 @@
 import { Box, Button, Typography, Stack } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import SearchIcon from "@mui/icons-material/Search";
-import IosShareIcon from "@mui/icons-material/IosShare";
 import AddNotesBox from "./AddNotesBox";
 import { useEffect, useState } from "react";
 import NotesBox from "./NotesBox";
@@ -111,17 +110,6 @@ export default function ForumContainer() {
             disabled
           >
             Suchen
-          </Button>
-          <Button
-            variant="text"
-            startIcon={<IosShareIcon />}
-            style={{ borderRadius: 13 }}
-            onClick={() => {
-              console.log("Teilen");
-            }}
-            disabled
-          >
-            Teilen
           </Button>
         </Stack>
         {showAddNotes && (
