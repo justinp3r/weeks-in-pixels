@@ -1,6 +1,5 @@
 {
   "name": "saturn-frontend",
-  "homepage" : "https://justinp3r.github.io/weeks-in-pixels",
   "private": true,
   "version": "0.0.0",
   "type": "module",
