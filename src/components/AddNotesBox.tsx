@@ -58,7 +58,7 @@ export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
         onChange={handleTextChange}
       />
       <Typography component={"span"}>
-        <Stack spacing={2} direction={{ xs: "column", sm: "row" }}>
+        <Stack spacing={2} direction={{ xs: "column", sm: "row" }} paddingTop={2}>
           <Button
             variant="text"
             startIcon={<SendIcon />}

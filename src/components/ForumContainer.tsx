@@ -7,7 +7,8 @@ import NotesBox from "./NotesBox";
 import React from "react";
 import axios from "axios";
 
-const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts"; // URL to mock API
+// const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts"; // URL to mock API
+const baseURL = "http://localhost:3000/posts";
 
 export default function ForumContainer() {
   interface Post {
@@ -77,9 +78,9 @@ export default function ForumContainer() {
       sx={{
         bgcolor: "primary.light",
         minHeight: "100",
-        paddingLeft: 6,
-        paddingRight: 6,
-        paddingBottom: 6,
+        paddingLeft: 5,
+        paddingRight: 5,
+        paddingBottom: 5,
         paddingTop: 3,
         margin: "auto",
         width: "100%",
@@ -124,9 +125,8 @@ export default function ForumContainer() {
         <Box
           key={post.id}
           sx={{
-            bgcolor: "secondary.light",
-            padding: 2,
-            margin: "auto",
+            bgcolor: "primary.light",
+            paddingTop: 2,
           }}
         >
           <NotesBox key={index} datum={post.date} inhalt={post.post} />

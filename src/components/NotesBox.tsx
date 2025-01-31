@@ -18,10 +18,11 @@ export default function NotesBox({ inhalt, datum }: textinhalt) {
         borderRadius: 4,
         border: "2px solid",
         borderColor: "#dbdde9",
+        width:"100%"
       }}
     >
-      <Typography variant="h5">{datum} </Typography>
-      <Typography>{inhalt} </Typography>
+      <Typography variant="body1">{datum} </Typography>
+      <Typography variant="body2">{inhalt} </Typography>
     </Box>
   );
 }

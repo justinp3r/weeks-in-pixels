@@ -39,15 +39,14 @@ export default function OneYearCheckboxes({ argumentYear }: argumentYearIF) {
       sx={{
         bgcolor: "primary.light",
         minHeight: "100",
-        paddingLeft: 6,
-        paddingRight: 6,
-        paddingBottom: 6,
+        paddingLeft: 5,
+        paddingRight: 5,
+        paddingBottom: 5,
         paddingTop: 3,
         margin: "auto",
       }}
     >
       <Typography component={"span"}>
-        {" "}
         <h3>{argumentYear.toString()} </h3>
       </Typography>
       <Grid container spacing={0}>
