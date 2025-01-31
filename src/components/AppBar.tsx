@@ -30,8 +30,8 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
             color="primary"
             aria-label="menu"
           >
-            <Icon>
-              <img src={"src/assets/cloud.png"} height={25} width={25} />
+            <Icon>/blob/main/dist/assets/index-AQMvzPGG.js
+              <img src={"cloud.png"} height={25} width={25} />
             </Icon>
           </IconButton>
           <Typography component={"span"} sx={{ flexGrow: 1 }}>
