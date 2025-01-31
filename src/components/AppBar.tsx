@@ -31,7 +31,7 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
             aria-label="menu"
           >
             <Icon>
-              <img src={"src/assets/cloud.png"} height={25} width={25} />
+              <img src={"assets/cloud.png"} height={25} width={25} />
             </Icon>
           </IconButton>
           <Typography component={"span"} sx={{ flexGrow: 1 }}>
