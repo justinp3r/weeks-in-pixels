@@ -30,7 +30,7 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
             color="primary"
             aria-label="menu"
           >
-            <Icon>/blob/main/dist/assets/index-AQMvzPGG.js
+            <Icon>
               <img src={"cloud.png"} height={25} width={25} />
             </Icon>
           </IconButton>
