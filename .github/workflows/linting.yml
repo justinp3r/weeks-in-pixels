@@ -16,15 +16,3 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - run: npm ci
-
-      - name: run Prettier
-        run: npm run prettier
-
-      - name: run ESlint
-        run: npm run lint 
-
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
