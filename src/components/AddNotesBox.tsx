@@ -1,6 +1,5 @@
-import SendIcon from "@mui/icons-material/Send";
-import CancelPresentationIcon from "@mui/icons-material/CancelPresentation";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
+import { ArrowUpFromLineIcon, XIcon } from 'raster-react';
 import { SetStateAction, useState } from "react";
 
 interface AddNotesBoxProps {
@@ -61,7 +60,7 @@ export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
         <Stack spacing={2} direction={{ xs: "column", sm: "row" }} paddingTop={2}>
           <Button
             variant="text"
-            startIcon={<SendIcon />}
+            startIcon={<ArrowUpFromLineIcon size={25} color="" strokeWidth={0.25} radius={1} />}
             style={{ borderRadius: 13 }}
             onClick={handleAddClick}
           >
@@ -69,7 +68,7 @@ export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
           </Button>
           <Button
             variant="text"
-            startIcon={<CancelPresentationIcon />}
+            startIcon={<XIcon size={25} color="" strokeWidth={0.25} radius={1} />}
             style={{ borderRadius: 13 }}
             onClick={onClose}
           >

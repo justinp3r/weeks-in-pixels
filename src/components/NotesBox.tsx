@@ -6,6 +6,8 @@ interface textinhalt {
 }
 
 export default function NotesBox({ inhalt, datum }: textinhalt) {
+  const borderRadius = 3;
+
   return (
     <Box
       sx={{
@@ -15,7 +17,7 @@ export default function NotesBox({ inhalt, datum }: textinhalt) {
         paddingBottom: 2,
         paddingTop: 0.5,
         margin: "auto",
-        borderRadius: 4,
+        borderRadius: borderRadius,
         border: "2px solid",
         borderColor: "#dbdde9",
         width:"100%"

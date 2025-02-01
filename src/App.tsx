@@ -14,6 +14,9 @@ import Calendar from "./components/Calendar";
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const borderLine = "0px"; // Only for developement Mode
+  const borderRadius = 5;
+  const elevationHeight = 3;
+  const elevationHeightActivated = 20;
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : themeJustin}>
@@ -35,12 +38,12 @@ function App() {
           >
             <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
-                elevation={3}
+                elevation={elevationHeight}
                 sx={{
                   display: "flex",
-                  borderRadius: 7,
+                  borderRadius: borderRadius,
                   ":hover": {
-                    boxShadow: 10,
+                    boxShadow: elevationHeightActivated,
                   },
                 }}
               >
@@ -50,12 +53,12 @@ function App() {
 
             <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
               <Card
-                elevation={3}
+                elevation={elevationHeight}
                 sx={{
                   display: "flex",
-                  borderRadius: 7,
+                  borderRadius: borderRadius,
                   ":hover": {
-                    boxShadow: 10,
+                    boxShadow: elevationHeightActivated,
                   },
                 }}
               >
@@ -64,12 +67,12 @@ function App() {
             </Grid>
           </Grid>
           <Card
-            elevation={3}
+            elevation={elevationHeight}
             sx={{
               display: "flex",
-              borderRadius: 7,
+              borderRadius: borderRadius,
               ":hover": {
-                boxShadow: 10,
+                boxShadow: elevationHeightActivated,
               },
             }}
           >
@@ -78,12 +81,12 @@ function App() {
         </Grid>
         <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={2} paddingBottom={8}>
           <Card
-            elevation={3}
+            elevation={elevationHeight}
             sx={{
               display: "flex",
-              borderRadius: 7,
+              borderRadius: borderRadius,
               ":hover": {
-                boxShadow: 10,
+                boxShadow: elevationHeightActivated,
               },
             }}
           >
