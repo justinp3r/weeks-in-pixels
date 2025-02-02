@@ -81,6 +81,22 @@ export default function About() {
           </Card>
         </Grid>
       </Grid>
+      <Grid
+        size={{ xs: 10, md: 5 }}
+        border={borderLine + " solid green"}
+        paddingTop={4}
+        paddingBottom={4}
+      >
+        <Typography
+          display={"flex"}
+          paddingTop={5}
+          justifyContent={"center"}
+          component={"span"}
+          color={"secondary.dark"}
+        >
+          Copyright ® {new Date().getFullYear()} Justin Perrone
+        </Typography>
+      </Grid>
     </Grid>
   );
 }
