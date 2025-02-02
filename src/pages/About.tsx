@@ -50,7 +50,7 @@ export default function About() {
                 minHeight: "100",
                 paddingLeft: 5,
                 paddingRight: 5,
-                paddingBottom: 5,
+                paddingBottom: 3,
                 paddingTop: 3,
                 margin: "auto",
                 width: "100%",
@@ -67,6 +67,7 @@ export default function About() {
                 Container lokal deployed werden. Die dafür benötigte REST API,
                 welche ebenfalls in einem Container läuft, findet sich auf
                 GitHub
+                <br/>
               </Typography>
               <Button
                 variant="text"
