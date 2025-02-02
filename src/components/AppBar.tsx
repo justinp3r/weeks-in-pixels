@@ -31,6 +31,7 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
             edge="start"
             color="primary"
             aria-label="menu"
+            onClick={() => navigate("/")}
           >
             <Icon>
               <img src={"cloud.png"} height={25} width={25} />
