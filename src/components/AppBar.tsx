@@ -2,7 +2,13 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
-import { FormControlLabel, FormGroup, Icon, IconButton, Typography } from "@mui/material";
+import {
+  FormControlLabel,
+  FormGroup,
+  Icon,
+  IconButton,
+  Typography,
+} from "@mui/material";
 import { MaterialUISwitch } from "./DarkModeToggle";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +17,10 @@ interface HeaderBarProps {
   setIsDarkMode: (value: boolean) => void;
 }
 
-export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps) {
+export default function HeaderBar({
+  isDarkMode,
+  setIsDarkMode,
+}: HeaderBarProps) {
   const navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -52,7 +61,9 @@ export default function HeaderBar({ isDarkMode, setIsDarkMode }: HeaderBarProps)
               label=""
             />
           </FormGroup>
-          <Button color="inherit" onClick={() => navigate("/about")}>About</Button>
+          <Button color="inherit" onClick={() => navigate("/about")}>
+            About
+          </Button>
         </Toolbar>
       </AppBar>
     </Box>

@@ -1,12 +1,15 @@
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
-import { InfoIcon } from "raster-react";
+import { ArrowLeftIcon, InfoIcon } from "raster-react";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
   const borderLine = "0px";
   const borderRadius = 5;
   const elevationHeight = 3;
   const elevationHeightActivated = 20;
+  const navigate = useNavigate();
+  
   return (
     <Grid
       justifyContent={"space-evenly"}
@@ -49,11 +52,32 @@ export default function About() {
             >
               <InfoIcon size={25} color="" strokeWidth={0.25} radius={1} />
               <Typography variant={"h6"} component={"span"}>
-               About
+                About
               </Typography>
-              <Typography component={"span"}><br/>Diese Website lässt dich das Jahr in Checkboxen anschauen und Notizen verfassen.
-              Alternativ kann das Projekt in einem Docker Container lokal deployed werden.
-              Die dafür benötigte REST API, welche ebenfalls in einem Container läuft, findet sich auf GitHub</Typography>
+              <Typography component={"span"}>
+                <br />
+                Diese Website lässt dich das Jahr in Checkboxen anschauen und
+                Notizen verfassen. Alternativ kann das Projekt in einem Docker
+                Container lokal deployed werden. Die dafür benötigte REST API,
+                welche ebenfalls in einem Container läuft, findet sich auf
+                GitHub
+              </Typography>
+              <Button
+                variant="text"
+                startIcon={
+                  <ArrowLeftIcon
+                    size={25}
+                    color=""
+                    strokeWidth={0.25}
+                    radius={1}
+                    
+                  />
+                }
+                onClick={() => navigate("/")}
+                style={{ borderRadius: 13 }}
+              >
+                Zurück
+              </Button>
             </Box>
           </Card>
         </Grid>
