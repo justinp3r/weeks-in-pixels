@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import HeaderBar from "./components/AppBar";
 import { themeJustin } from "./theme";
 import { Outlet } from "react-router";
-import { Card, CssBaseline } from "@mui/material";
+import { Card, CssBaseline, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import OneYearCheckboxes from "./components/OneYearCheckboxes";
 import ForumContainer from "./components/ForumContainer";
@@ -93,6 +93,10 @@ function App() {
             <ForumContainer></ForumContainer>
           </Card>
         </Grid>
+        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={4} paddingBottom={4} >
+          <Typography display={"flex"} paddingTop={5} justifyContent={"center"} component={"span"} color={"secondary.dark"} >® 2025 Justin Perrone</Typography>
+        </Grid>
+        
       </Grid>
     </ThemeProvider>
   );

@@ -12,7 +12,7 @@ export const darkTheme = createTheme({
     secondary: {
       light: '#3c3c3c',
       main: '#e8e9ff',
-      dark: '#ba000d',
+      dark: '#818181',
       contrastText: '#000',
     },
     action: {
