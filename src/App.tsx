@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import HeaderBar from "./components/AppBar";
 import { themeJustin } from "./theme";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { Card, CssBaseline, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import OneYearCheckboxes from "./components/OneYearCheckboxes";
@@ -17,12 +17,15 @@ function App() {
   const borderRadius = 5;
   const elevationHeight = 3;
   const elevationHeightActivated = 20;
+  const location = useLocation();
+  const isRootRoute = location.pathname === "/";
 
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : themeJustin}>
       <CssBaseline />
       <HeaderBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Outlet />
+      {isRootRoute && (
       <Grid
         justifyContent={"space-evenly"}
         container
@@ -96,8 +99,8 @@ function App() {
         <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={4} paddingBottom={4} >
           <Typography display={"flex"} paddingTop={5} justifyContent={"center"} component={"span"} color={"secondary.dark"} >Copyright ® {new Date().getFullYear()} Justin Perrone</Typography>
         </Grid>
-        
       </Grid>
+      )}
     </ThemeProvider>
   );
 }

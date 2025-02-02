@@ -4,6 +4,7 @@ import App from './App.tsx'
 import { Routes, Route } from "react-router";
 import {HashRouter } from 'react-router-dom';
 import './fonts/fonts.css';
+import About from './pages/about.tsx';
 
 const root = document.getElementById("root");
 
@@ -14,7 +15,7 @@ createRoot(root!).render(
         {/* App als übergeordnete Route */}
         <Route path="/" element={<App />}>
           {/* Subroutes, die im Outlet von App gerendert werden */}
-          <Route index element={null /* Home-Inhalt kann hier hinzugefügt werden */} />
+          <Route path="about" element={<About/>} />
         </Route>
       </Routes>
   </HashRouter>
