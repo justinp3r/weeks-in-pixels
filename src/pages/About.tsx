@@ -2,6 +2,7 @@ import { Box, Button, Card, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { ArrowLeftIcon, InfoIcon } from "raster-react";
 import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function About() {
   const borderLine = "0px";
@@ -21,12 +22,17 @@ export default function About() {
         size={{ xs: 10, md: 10 }}
         border={borderLine + " solid red"}
         paddingTop={2}
+        display="flex"
+        justifyContent={"center"}
+        alignContent={"center"}
       >
         <Grid
           border={borderLine + " solid orange"}
+          size={{ xs: 12, md: 7 }}
           paddingBottom={8}
           display="flex"
           justifyContent={"center"}
+          alignContent={"center"}
         >
           <Card
             elevation={elevationHeight}
@@ -82,20 +88,12 @@ export default function About() {
         </Grid>
       </Grid>
       <Grid
-        size={{ xs: 10, md: 5 }}
+        size={{ xs: 11, md: 5 }}
         border={borderLine + " solid green"}
         paddingTop={4}
         paddingBottom={4}
       >
-        <Typography
-          display={"flex"}
-          paddingTop={5}
-          justifyContent={"center"}
-          component={"span"}
-          color={"secondary.dark"}
-        >
-          Copyright ® {new Date().getFullYear()} Justin Perrone
-        </Typography>
+        <Footer/>
       </Grid>
     </Grid>
   );

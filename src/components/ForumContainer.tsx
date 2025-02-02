@@ -62,7 +62,8 @@ export default function ForumContainer() {
     }
   };
 
-  useEffect(() => {
+  // Stellt einmalige Abfrage an REST API
+  useEffect(() => { 
     handleReloadNotes();
   }, []);
 

@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import HeaderBar from "./components/AppBar";
 import { themeJustin } from "./theme";
 import { Outlet, useLocation } from "react-router";
-import { Card, CssBaseline, Typography } from "@mui/material";
+import { Card, CssBaseline } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import OneYearCheckboxes from "./components/OneYearCheckboxes";
 import ForumContainer from "./components/ForumContainer";
@@ -10,6 +10,7 @@ import { darkTheme } from "./themeDark";
 import { useState } from "react";
 import Clock from "./components/Clock";
 import Calendar from "./components/Calendar";
+import Footer from "./components/Footer";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -96,8 +97,8 @@ function App() {
             <ForumContainer></ForumContainer>
           </Card>
         </Grid>
-        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={4} paddingBottom={4} >
-          <Typography display={"flex"} paddingTop={5} justifyContent={"center"} component={"span"} color={"secondary.dark"} >Copyright ® {new Date().getFullYear()} Justin Perrone</Typography>
+        <Grid size={{ xs: 11, md: 5 }} border={borderLine + " solid green"} paddingTop={4} paddingBottom={4} >
+          <Footer/>
         </Grid>
       </Grid>
       )}
