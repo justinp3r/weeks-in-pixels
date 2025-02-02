@@ -9,7 +9,7 @@ export default function About() {
   const elevationHeight = 3;
   const elevationHeightActivated = 20;
   const navigate = useNavigate();
-  
+
   return (
     <Grid
       justifyContent={"space-evenly"}
@@ -70,7 +70,6 @@ export default function About() {
                     color=""
                     strokeWidth={0.25}
                     radius={1}
-                    
                   />
                 }
                 onClick={() => navigate("/")}
