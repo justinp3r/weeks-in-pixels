@@ -8,7 +8,6 @@ interface AddNotesBoxProps {
 }
 
 export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
-  const today = new Date();
   const [text, setText] = useState("");
 
   const handleTextChange = (event: {
@@ -40,11 +39,11 @@ export default function AddNotesBox({ onClose, onAddNote }: AddNotesBoxProps) {
       <Typography component={"span"}>
         <h3>
           Rückblick vom{" "}
-          {today.getDate() +
-            "." +
-            (today.getMonth() + 1) +
-            "." +
-            today.getFullYear()}
+          {new Date().toLocaleDateString("de-DE", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        })}
         </h3>
       </Typography>
       <TextField

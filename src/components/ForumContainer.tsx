@@ -1,12 +1,12 @@
 import { Box, Button, Typography, Stack } from "@mui/material";
-import { ArrowUpFromLineIcon, SearchIcon } from 'raster-react';
+import { ArrowUpFromLineIcon, SearchIcon } from "raster-react";
 import AddNotesBox from "./AddNotesBox";
 import { useEffect, useState } from "react";
 import NotesBox from "./NotesBox";
 import React from "react";
 import axios from "axios";
 
-const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts"; 
+const baseURL = "https://679bf08933d316846325966b.mockapi.io/ap/v1/posts";
 // const baseURL = "http://localhost:3000/posts"; // DEV Api local
 
 export default function ForumContainer() {
@@ -15,7 +15,7 @@ export default function ForumContainer() {
     date: string;
     post: string;
   }
-  
+
   const [posts, setPost] = React.useState<Post[]>([]);
   const [showAddNotes, setShowAddNotes] = useState(false);
 
@@ -63,7 +63,7 @@ export default function ForumContainer() {
   };
 
   // Stellt einmalige Abfrage an REST API
-  useEffect(() => { 
+  useEffect(() => {
     handleReloadNotes();
   }, []);
 
@@ -95,7 +95,14 @@ export default function ForumContainer() {
         <Stack spacing={4} direction="row">
           <Button
             variant="text"
-            startIcon={<ArrowUpFromLineIcon size={25} color="" strokeWidth={0.25} radius={1} />}
+            startIcon={
+              <ArrowUpFromLineIcon
+                size={25}
+                color=""
+                strokeWidth={0.25}
+                radius={1}
+              />
+            }
             style={{ borderRadius: 13 }}
             onClick={handleToggleAddNotes}
           >
@@ -103,7 +110,9 @@ export default function ForumContainer() {
           </Button>
           <Button
             variant="text"
-            startIcon={<SearchIcon size={25} color="" strokeWidth={0.25} radius={1} />}
+            startIcon={
+              <SearchIcon size={25} color="" strokeWidth={0.25} radius={1} />
+            }
             style={{ borderRadius: 13 }}
             onClick={() => {
               console.log("Suchen");

@@ -27,81 +27,96 @@ function App() {
       <HeaderBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Outlet />
       {isRootRoute && (
-      <Grid
-        justifyContent={"space-evenly"}
-        container
-        spacing={2}
-        border={borderLine + " solid grey"}
-      >
-        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid red"} paddingTop={2}>
+        <Grid
+          justifyContent={"space-evenly"}
+          container
+          spacing={2}
+          border={borderLine + " solid grey"}
+          sx={{
+            minHeight: "100vh",
+          }}
+        >
           <Grid
-            border={borderLine + " solid orange"}
-            paddingBottom={8}
-            display="flex"
-            justifyContent={"space-between"}
+            size={{ xs: 10, md: 5 }}
+            border={borderLine + " solid red"}
+            paddingTop={2}
           >
-            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
-              <Card
-                elevation={elevationHeight}
-                sx={{
-                  display: "flex",
-                  borderRadius: borderRadius,
-                  ":hover": {
-                    boxShadow: elevationHeightActivated,
-                  },
-                }}
+            <Grid
+              border={borderLine + " solid orange"}
+              paddingBottom={{ xs: 4, md: 8 }}
+              display="flex"
+              justifyContent={"space-between"}
+            >
+              <Grid
+                size={{ xs: 5.5, md: 5.5 }}
+                border={borderLine + " solid red"}
               >
-                <Clock />
-              </Card>
-            </Grid>
+                <Card
+                  elevation={elevationHeight}
+                  sx={{
+                    display: "flex",
+                    borderRadius: borderRadius,
+                    ":hover": {
+                      boxShadow: elevationHeightActivated,
+                    },
+                  }}
+                >
+                  <Clock />
+                </Card>
+              </Grid>
 
-            <Grid size={{ xs: 5.5, md: 5.5 }} border={borderLine + " solid red"}>
-              <Card
-                elevation={elevationHeight}
-                sx={{
-                  display: "flex",
-                  borderRadius: borderRadius,
-                  ":hover": {
-                    boxShadow: elevationHeightActivated,
-                  },
-                }}
+              <Grid
+                size={{ xs: 5.5, md: 5.5 }}
+                border={borderLine + " solid red"}
               >
-                <Calendar />
-              </Card>
+                <Card
+                  elevation={elevationHeight}
+                  sx={{
+                    display: "flex",
+                    borderRadius: borderRadius,
+                    ":hover": {
+                      boxShadow: elevationHeightActivated,
+                    },
+                  }}
+                >
+                  <Calendar />
+                </Card>
+              </Grid>
             </Grid>
+            <Card
+              elevation={elevationHeight}
+              sx={{
+                display: "flex",
+                borderRadius: borderRadius,
+                ":hover": {
+                  boxShadow: elevationHeightActivated,
+                },
+              }}
+            >
+              <OneYearCheckboxes argumentYear={"2025"}></OneYearCheckboxes>
+            </Card>
           </Grid>
-          <Card
-            elevation={elevationHeight}
-            sx={{
-              display: "flex",
-              borderRadius: borderRadius,
-              ":hover": {
-                boxShadow: elevationHeightActivated,
-              },
-            }}
+          <Grid
+            size={{ xs: 10, md: 5 }}
+            border={borderLine + " solid green"}
+            paddingTop={2}
           >
-            <OneYearCheckboxes argumentYear={"2025"}></OneYearCheckboxes>
-          </Card>
+            <Card
+              elevation={elevationHeight}
+              sx={{
+                display: "flex",
+                borderRadius: borderRadius,
+                ":hover": {
+                  boxShadow: elevationHeightActivated,
+                },
+              }}
+            >
+              <ForumContainer></ForumContainer>
+            </Card>
+          </Grid>
         </Grid>
-        <Grid size={{ xs: 10, md: 5 }} border={borderLine + " solid green"} paddingTop={2} paddingBottom={8}>
-          <Card
-            elevation={elevationHeight}
-            sx={{
-              display: "flex",
-              borderRadius: borderRadius,
-              ":hover": {
-                boxShadow: elevationHeightActivated,
-              },
-            }}
-          >
-            <ForumContainer></ForumContainer>
-          </Card>
-        </Grid>
-        <Grid size={{ xs: 11, md: 5 }} border={borderLine + " solid green"} paddingTop={4} paddingBottom={4} >
-          <Footer/>
-        </Grid>
-      </Grid>
       )}
+      <Footer />
     </ThemeProvider>
   );
 }
