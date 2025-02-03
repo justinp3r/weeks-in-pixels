@@ -33,7 +33,7 @@ function App() {
           spacing={2}
           border={borderLine + " solid grey"}
           sx={{
-            minHeight: "85vh",
+            minHeight: "84vh"
           }}
         >
           <Grid
