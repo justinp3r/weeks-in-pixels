@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: '18'
 
-      - run: npm ci
+      - run: npm install
 
       - name: run Prettier
         run: npm run prettier
