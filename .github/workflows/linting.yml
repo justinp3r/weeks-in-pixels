@@ -1,4 +1,14 @@
+name: Linting
+
+on:
   push:
+    branches:
+      - main
+    paths-ignore:
+      - 'dist/**'
+      - 'build/**'
+      - '.github/pages/**'
+  pull_request:
     branches:
       - main
 
@@ -6,6 +16,7 @@ jobs:
   super-lint:
     name: lint code base
     runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/gh-pages'  # gh-pages Branch ausschließen, da sonst Fehler auftreten
 
     steps:
       - name: checkout code
