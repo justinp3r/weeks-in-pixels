@@ -93,7 +93,7 @@ function App() {
                 },
               }}
             >
-              <OneYearCheckboxes argumentYear={new Date().getFullYear()}></OneYearCheckboxes>
+              <OneYearCheckboxes argumentYear={new Date().getFullYear().toString()}></OneYearCheckboxes>
             </Card>
           </Grid>
           <Grid
